@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Omkar Jadhav</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* BODY */
+body {
+    background: #0a0a0f;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10,10,15,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #a855f7;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a855f7;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 8% 80px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small {
+    color: #a855f7;
+    margin-bottom: 10px;
+}
+
+.big {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #8b5cf6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub {
+    margin-top: 20px;
+    color: #9ca3af;
+    font-size: 18px;
+}
+
+.hero img {
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(168,85,247,0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* FLOAT */
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0);}
+}
+
+/* GLOW BACKGROUND */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(168,85,247,0.2), transparent);
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 8%;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #a855f7;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #a855f7;
+}
+
+/* PROJECT */
+.project {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px #a855f7;
+}
+
+.project img {
+    width: 400px;
+    border-radius: 15px;
+}
+
+.project-text h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-top: 30px;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project img {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Omkar</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-text">
+    <p class="small">A Developer who</p>
+
+    <h1 class="big">
+        Builds things<br>
+        that <span class="gradient">stand out</span>
+    </h1>
+
+    <p class="sub">
+        Computer Science student at MIT AOE.  
+        Freelance graphic designer and creator of NavSafe.
+    </p>
+</div>
+
+<img src="logo.jpg" alt="logo">
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I'm Omkar Jadhav, a Computer Science student at MIT AOE.  
+        I have experience in freelancing as a graphic designer and enjoy creating impactful projects.
+    </p>
+</section>
+
+<!-- WORK -->
+<section id="work">
+    <h2>Work</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Graphic Design</h3>
+            <p>Freelancing experience with creative designs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Building modern and interactive websites.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section id="projects">
+    <h2>Featured Project</h2>
+
+    <div class="project">
+        <img src="navsafe.png" alt="project">
+
+        <div class="project-text">
+            <h3>NavSafe – Safe Navigation System</h3>
+            <p>
+                NavSafe helps users avoid unsafe areas using safety-based routing.
+                It allows users to mark locations and generate safer paths.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Omkar Jadhav
+</footer>
+
+</body>
+</html>
