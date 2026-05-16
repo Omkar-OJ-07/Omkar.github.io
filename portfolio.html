@@ -187,6 +187,114 @@ h2 {
     margin-bottom: 10px;
 }
 
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(168,85,247,0.15);
+    color: #c084fc;
+    border: 1px solid rgba(168,85,247,0.3);
+    letter-spacing: 0.5px;
+}
+
+.project-badge {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #34d399;
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.3);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* CERT GRID */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(168,85,247,0.15);
+    padding: 24px;
+    border-radius: 16px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8b5cf6, #a855f7);
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 24px rgba(168,85,247,0.3);
+    border-color: rgba(168,85,247,0.4);
+}
+
+.cert-issuer {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.cert-issuer.cisco {
+    background: rgba(0, 120, 200, 0.2);
+    color: #60a5fa;
+}
+
+.cert-issuer.anthropic {
+    background: rgba(168,85,247,0.2);
+    color: #c084fc;
+}
+
+.cert-issuer.nasscom {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+}
+
+.cert-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 6px;
+    color: #fff;
+}
+
+.cert-sub {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.cert-date {
+    font-size: 12px;
+    color: #a855f7;
+    font-weight: 600;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -227,6 +335,7 @@ footer {
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
     </ul>
 </nav>
 
@@ -255,9 +364,13 @@ footer {
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I'm Omkar Jadhav, a Computer Science student at MIT AOE.  
-        I have experience in freelancing as a graphic designer and enjoy creating impactful projects.
-    </p>
+        I am a student at MIT Academy of Engineering with a strong interest in technology, programming, and artificial intelligence. I enjoy learning practical concepts and applying them through projects related to web development, AI, data analysis, and problem-solving.
+
+I have worked on projects involving safe route navigation systems, AI in healthcare, and Python-based data handling using libraries like NumPy. I am also interested in software development, frontend design, and creating user-friendly applications that solve real-world problems.
+
+Apart from academics, I actively explore new technologies, improve my coding skills, and learn through hands-on experimentation. I enjoy understanding how systems work, building projects from scratch, and continuously improving my technical knowledge.
+
+My goal is to grow as a skilled software and AI developer while contributing to innovative and impactful solutions.
 </section>
 
 <!-- WORK -->
@@ -277,20 +390,96 @@ footer {
     </div>
 </section>
 
-<!-- PROJECT -->
+<!-- PROJECTS -->
 <section id="projects">
-    <h2>Featured Project</h2>
+    <h2>Projects</h2>
 
     <div class="project">
-        <img src="navsafe.png" alt="project">
+        <img src="navsafe.png" alt="NavSafe project screenshot">
 
         <div class="project-text">
             <h3>NavSafe – Safe Navigation System</h3>
             <p>
                 NavSafe helps users avoid unsafe areas using safety-based routing.
-                It allows users to mark locations and generate safer paths.
+                It allows users to mark locations and generate safer paths based on 
+                crowd-sourced safety data like street lights, police presence, and crime reports.
             </p>
+            <div class="project-tags">
+                <span class="tag">Leaflet.js</span>
+                <span class="tag">Routing</span>
+                <span class="tag">Safety Data</span>
+            </div>
         </div>
+    </div>
+
+    <div class="project" style="margin-top: 30px;">
+        <img src="Heart.png" alt="MMHDL-CVD project screenshot">
+
+        <div class="project-text">
+            <div class="project-badge">CUDA · API ONLINE</div>
+            <h3>MMHDL-CVD – Cardiac Risk Intelligence</h3>
+            <p>
+                A multimodal deep learning system for cardiovascular risk assessment fusing ECG, 
+                clinical, and wearable data. Predicts CVD probability and risk score with 
+                high confidence using patient vitals and clinical markers.
+            </p>
+            <div class="project-tags">
+                <span class="tag">Deep Learning</span>
+                <span class="tag">ECG Fusion</span>
+                <span class="tag">CUDA</span>
+                <span class="tag">Clinical AI</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+    <h2>Certificates</h2>
+    <div class="cert-grid">
+
+        <div class="cert-card">
+            <div class="cert-issuer cisco">Cisco Networking Academy</div>
+            <h3 class="cert-title">Python Essentials 1</h3>
+            <p class="cert-sub">MIT Academy of Engineering, Alandi Pune</p>
+            <span class="cert-date">Apr 2026</span>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-issuer cisco">Cisco Networking Academy</div>
+            <h3 class="cert-title">Python Essentials 2</h3>
+            <p class="cert-sub">MIT Academy of Engineering, Alandi Pune</p>
+            <span class="cert-date">Apr 2026</span>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-issuer anthropic">Anthropic</div>
+            <h3 class="cert-title">Claude 101</h3>
+            <p class="cert-sub">Anthropic Certificate of Completion</p>
+            <span class="cert-date">2026</span>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-issuer anthropic">Anthropic</div>
+            <h3 class="cert-title">AI Fluency for Students</h3>
+            <p class="cert-sub">Anthropic · UCC · Ringling College · HEA</p>
+            <span class="cert-date">2026</span>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-issuer anthropic">Anthropic</div>
+            <h3 class="cert-title">AI Fluency for Nonprofits</h3>
+            <p class="cert-sub">Anthropic · GivingTuesday</p>
+            <span class="cert-date">2026</span>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-issuer nasscom">NASSCOM FutureSkills Prime</div>
+            <h3 class="cert-title">Digital 101 – 30 Hours</h3>
+            <p class="cert-sub">AI, ML & Deep Learning Pathways · 54/54 Completed</p>
+            <span class="cert-date">2026</span>
+        </div>
+
     </div>
 </section>
 
